@@ -1,0 +1,36 @@
+# Environment
+.env
+.venv/
+venv/
+env/
+.localappdata/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output (keep sample_outputs/, ignore runtime output)
+output/*.pdf
+output/*.md
+output/*.log
+benchmarks.json
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
