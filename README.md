@@ -116,6 +116,34 @@ Edit `.env` and set the following keys:
 | `SERPER_API_KEY` | 🔄 Fallback | Alternative search API (if Tavily unavailable) |
 | `MANAGER_LLM_MODEL` | ❌ Optional | Override default model (default: `gpt-4o`) |
 
+## 🌐 REST API Endpoints & Server
+
+The application provides both a CLI interface and a production **FastAPI REST API**.
+
+### Starting the API Server
+
+```bash
+python api.py
+# or using uvicorn directly:
+uvicorn api:app --host 0.0.0.0 --port 8000
+```
+
+Interactive Swagger documentation is available at `http://localhost:8000/docs`.
+
+### Available Endpoints Summary
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/` | API status and directory of available endpoints |
+| `GET` | `/health` | Service health status |
+| `POST` | `/api/research` | Trigger the multi-agent market research & PDF generation pipeline |
+| `GET` | `/api/reports/download` | Download the compiled A4 PDF report (`market_report.pdf`) |
+| `GET` | `/api/reports/markdown` | View the generated Markdown report (`market_report.md`) |
+| `GET` | `/api/benchmarks` | Retrieve task latency benchmarks and routing history (`benchmarks.json`) |
+| `POST` | `/api/metrics/calculate` | Compute Pandas descriptive statistics on a CSV dataset |
+
+---
+
 ## 💻 Usage
 
 ### Run the Main Application
