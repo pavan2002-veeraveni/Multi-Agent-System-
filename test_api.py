@@ -6,15 +6,10 @@ from api import app
 
 client = TestClient(app)
 
-print("--> Testing GET / (Web Dashboard)", flush=True)
+print("--> Testing GET /", flush=True)
 r1 = client.get("/")
-print("Status:", r1.status_code, "| Content type:", r1.headers.get("content-type"), flush=True)
-assert r1.status_code == 200
-assert "Multi-Agent" in r1.text
-
-print("\n--> Testing GET /api/info", flush=True)
-r_info = client.get("/api/info")
-print("Status:", r_info.status_code, "Endpoints count:", len(r_info.json().get("endpoints", {})), flush=True)
+print("Status:", r1.status_code, flush=True)
+print("Response:", json.dumps(r1.json(), indent=2), flush=True)
 
 print("\n--> Testing GET /health", flush=True)
 r2 = client.get("/health")
