@@ -25,10 +25,7 @@ def create_agents() -> dict[str, Agent]:
     researcher = Agent(
         role="Market Research Specialist",
         goal=(
-            "Query search networks, locate financial data, and scrape "
-            "company metrics for the requested market research topic. "
-            "Gather comprehensive data from multiple sources to build "
-            "a complete picture of the market landscape."
+            "Query search search networks, locate financial data, and scrape company metrics."
         ),
         backstory=(
             "You are a seasoned market research specialist with 15 years of "
@@ -46,9 +43,7 @@ def create_agents() -> dict[str, Agent]:
     analyst = Agent(
         role="Financial Data Analyst",
         goal=(
-            "Parse data matrices using Pandas, compute averages, standard "
-            "deviations, and other statistical measures, and verify numeric "
-            "consistency across all gathered financial datasets."
+            "Parse data matrices using Pandas, compute averages, and verify numeric consistency."
         ),
         backstory=(
             "You are an expert quantitative analyst with a strong background "
@@ -66,10 +61,7 @@ def create_agents() -> dict[str, Agent]:
     writer = Agent(
         role="Technical Reports Writer",
         goal=(
-            "Synthesize the research findings and analytical results into "
-            "a well-structured, professional market research report. Write "
-            "clear executive summaries, detailed analysis sections, and "
-            "actionable conclusions."
+            "Synthesize information, write sections, and structure copy."
         ),
         backstory=(
             "You are a professional technical writer specializing in financial "

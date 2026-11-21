@@ -1,6 +1,13 @@
-# Multi-Agent Market Research & Report Generator with CrewAI
+# Multi-Agent Market Research with CrewAI
+- **Repository**: [Insert URL]
 
-A comprehensive multi-agent system built with **CrewAI** that orchestrates three specialized AI agents to conduct market research, analyze financial data, and generate professional PDF reports.
+## Installation
+1. Configure `.env` file (`TAVILY_API_KEY`, `OPENAI_API_KEY`).
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run main app: `python main.py`
+4. Run tests: `pytest`
+
+---
 
 ## 🏗️ Architecture
 
