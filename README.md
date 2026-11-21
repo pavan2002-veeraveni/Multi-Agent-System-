@@ -1,5 +1,5 @@
 # Multi-Agent Market Research with CrewAI
-- **Repository**: [Insert URL]
+- **Repository**: https://github.com/pavan2002-veeraveni/Multi-Agent-System-
 
 ## Installation
 1. Configure `.env` file (`TAVILY_API_KEY`, `OPENAI_API_KEY`).
