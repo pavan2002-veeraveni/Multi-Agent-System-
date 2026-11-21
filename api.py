@@ -50,22 +50,22 @@ class ResearchRequest(BaseModel):
     query: str = Field(
         default="Tech Sector Q3 Analysis",
         description="The topic or industry sector for market research.",
-        example="Tech Sector Q3 Analysis",
+        examples=["Tech Sector Q3 Analysis"],
     )
     csv_path: Optional[str] = Field(
         default="data/sample_metrics.csv",
         description="Relative or absolute path to corporate financial metrics CSV.",
-        example="data/sample_metrics.csv",
+        examples=["data/sample_metrics.csv"],
     )
     manager_model: Optional[str] = Field(
         default="gpt-4o",
         description="Manager LLM model identifier for hierarchical supervision.",
-        example="gpt-4o",
+        examples=["gpt-4o"],
     )
     mock: Optional[bool] = Field(
         default=False,
         description="Force simulation mode for offline testing without live LLM calls.",
-        example=False,
+        examples=[False],
     )
 
 
@@ -73,7 +73,7 @@ class MetricsRequest(BaseModel):
     csv_path: str = Field(
         default="data/sample_metrics.csv",
         description="Path to CSV dataset for descriptive statistical parsing.",
-        example="data/sample_metrics.csv",
+        examples=["data/sample_metrics.csv"],
     )
 
 
